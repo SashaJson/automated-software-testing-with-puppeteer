@@ -5,7 +5,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": [
+    "Puppeteer",
+    "Mocha",
+    "Chai",
+    "Automation"
+  ],
   "author": "Alexander Shulha (sashamiller666@gmail.com)",
   "license": "ISC",
   "repository": {
@@ -16,5 +21,10 @@
     "url": "https://github.com/SashaJson/automated-software-testing-with-puppeteer/issues"
   },
   "homepage": "https://github.com/SashaJson/automated-software-testing-with-puppeteer#readme",
-  "description": ""
+  "description": "Automation testing with puppeteer",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.2.1",
+    "puppeteer": "^5.5.0"
+  }
 }
