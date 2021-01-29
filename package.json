@@ -5,7 +5,9 @@
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha --timeout=30000 ./tests",
     "test:device": "./node_modules/mocha/bin/mocha --timeout=30000 ./tests/device.test.js",
-    "test:e2e": "./node_modules/mocha/bin/mocha --timeout=30000 ./tests/e2e/*.test.js"
+    "test:e2e": "./node_modules/mocha/bin/mocha --timeout=30000 ./tests/e2e/*.test.js",
+    "test:snapshot":  "jest --config=jest.config.js --detectedOpenHandles --forceExit",
+    "test:snapshot:update": "jest --config=jest.config.js --updateSnapshot --detectOpenHandle --forceExit"
   },
   "keywords": [
     "Puppeteer",
