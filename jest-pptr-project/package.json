@@ -1,0 +1,15 @@
+{
+  "name": "jest-pptr-project",
+  "version": "1.0.0",
+  "description": "jest puppeteer project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "jest",
+    "puppeteer"
+  ],
+  "author": "sasha shulha (sashamiller666@gmail.com)",
+  "license": "ISC"
+}
