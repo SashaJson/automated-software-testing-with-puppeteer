@@ -24,14 +24,4 @@ describe('Device Emulation', () => {
         await browser.close();
     });
 
-    it('0. Login Test - Invalid Credentials', async () => {
-
-
-
-    });
-
-    it('1. Login Test - Valid Credentials', async () => {
-
-    });
-
 });

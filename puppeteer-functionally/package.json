@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha --timeout=30000 ./tests",
-    "test:device": "./node_modules/mocha/bin/mocha --timeout=30000 ./tests/device.test.js",
-    "test:e2e": "./node_modules/mocha/bin/mocha --timeout=30000 ./tests/e2e/*.test.js",
-    "test:snapshot":  "jest --config=jest.config.js --detectedOpenHandles --forceExit",
+    "test": "./node_modules/mocha/bin/mocha --timeout=30000 tests",
+    "test:device": "./node_modules/mocha/bin/mocha --timeout=30000 tests/device.test.js",
+    "test:e2e": "./node_modules/mocha/bin/mocha --timeout=30000 puppeteer-functionally/tests/e2e/*.test.js",
+    "test:snapshot": "jest --config=jest.config.js --detectedOpenHandles --forceExit",
     "test:snapshot:update": "jest --config=jest.config.js --updateSnapshot --detectOpenHandle --forceExit"
   },
   "keywords": [
