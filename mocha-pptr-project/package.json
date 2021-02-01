@@ -4,7 +4,9 @@
   "description": "test framework with mocha steps and builder class pattern",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf build",
+    "build": "babel --preset es2015 -d /build /src"
   },
   "keywords": [
     "mocha",
