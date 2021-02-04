@@ -52,4 +52,53 @@ export default class Builder {
         this.page = page;
     }
 
+    async waitAndCLick(selector) {
+        await this.page.waitForSelector(selector);
+        await this.page.click(selector);
+    }
+
+    async waitAndType(
+        selector,
+        type
+    ) {
+        await this.page.waitForSelector(selector);
+        await this.page.type(selector, text);
+    }
+
+
+    async getText(selector) {
+        await this.page.waitForSelector(selector);
+        return await this.page.$eval(selector, e => e.innerText);
+    }
+
+    async getCount(selector) {
+        await this.page.waitForSelector(selector);
+        return await this.page.$$eval(selector, items => items.length);
+    }
+
+    async waitForXPathAndClick(xpath) {
+        await this.page.waitForXPath(xpath);
+        const element = await this.page.$x(xpath);
+        if (element.length > 1) {
+            console.warn('waitForXPathAndClick return more than one result');
+        }
+        await element[0].click();
+    }
+
+    async isElementVisible(selector) {
+        let visible = true;
+        await this.page
+            .waitForSelector(selector, {visible: true, timeout: 3000})
+            .catch(() => visible = false);
+        return visible;
+    }
+
+    async isXPathVisible(selector) {
+        let visible = true;
+        await this.page
+            .waitForXPath(selector, {visible: true, timeout: 3000})
+            .catch(() => visible = false);
+        return visible;
+    }
+
 }
