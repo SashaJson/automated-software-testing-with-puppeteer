@@ -1,0 +1,24 @@
+{
+  "name": "cucumber-pptr",
+  "version": "1.0.0",
+  "description": "puppeteer with cucumber js",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js -f json:cucumber_report.json",
+    "generation:report": "node report.js"
+  },
+  "keywords": [
+    "puppeteer",
+    "gherkin",
+    "cucumber",
+    "javascript"
+  ],
+  "author": "Sasha Shulha (sashamiller666@gmail.com)",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.3.0",
+    "cucumber": "^7.0.0-rc.0",
+    "cucumber-html-report": "^0.6.5",
+    "puppeteer": "^7.0.1"
+  }
+}
