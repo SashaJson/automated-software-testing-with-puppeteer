@@ -65,7 +65,6 @@ export default class Builder {
         await this.page.type(selector, text);
     }
 
-
     async getText(selector) {
         await this.page.waitForSelector(selector);
         return await this.page.$eval(selector, e => e.innerText);
