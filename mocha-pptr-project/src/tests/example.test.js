@@ -1,31 +1,38 @@
 import {step} from 'mocha-steps';
 
 import Page from '../builder';
+import LoginPage from '../pages/loginPage';
 
 describe('Mocha steps demo', () => {
 
     let page;
+    let loginPage;
 
     before(async () => {
         page = await Page.builder('Desktop');
+        loginPage = new LoginPage(page);
     });
 
     after(async () => await page.close());
 
     step('should load google homepage', async () => {
-        await page.goto('https://www.google.com/');
+        await page.goto('https://zero.webappsecurity.com/index.html');
+        expect(await page.isElementVisible('#signin_button')).to.be.true;
     });
 
-    step('step 2 should fail', async () => {
-        await page.waitForSelector('#FAIL');
+    step('should display login form', async () => {
+        await page.waitAndCLick('#signin_button');
+        expect(await page.isElementVisible('#login_form')).to.be.true;
+        expect(await page.isElementVisible('#login_button')).to.be.false;
     });
 
-    step('step 3 should fail', async () => {
-        console.log('From step 3');
+    step('should login to application', async () => {
+        await loginPage.login('username', 'password');
+        expect(await page.isElementVisible('.nav-tabs')).to.be.true;
     });
 
-    step('step 4 should fail', async () => {
-        console.log('From step 4');
+    step('should have 6 navbar links', async () => {
+        expect(await page.getCount('.nav-tabs li')).to.equal(6);
     });
 
 });
