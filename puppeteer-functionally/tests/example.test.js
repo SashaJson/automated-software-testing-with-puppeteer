@@ -14,6 +14,7 @@ describe('My first puppeteer test', () => {
 
         const page = await browser.newPage();
         await page.goto('https://devexpress.github.io/testcafe/example');
+        // await jestPuppeteer.debug();
         await browser.close();
 
     });
