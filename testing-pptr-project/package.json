@@ -1,0 +1,14 @@
+{
+  "name": "testing-pptr-project",
+  "version": "1.0.0",
+  "description": "automation testing with puppeteer ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "puppeteer"
+  ],
+  "author": "Sasha Shulha (sashamiller666@gmail.com)",
+  "license": "ISC"
+}
