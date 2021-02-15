@@ -58,12 +58,13 @@ module.exports = {
     ) => {
         try {
             await page.waitForSelector(selector);
-            await page.waitForFunction((selector, text) => {
-                document.querySelector(selector).innerText.includes(text),
-                    {},
-                    selector,
-                    text
-            });
+            await page.waitForFunction(
+                (selector, text) =>
+                    document.querySelector(selector).innerText.includes(text),
+                {},
+                selector,
+                text
+            );
         } catch (error) {
             throw new Error(`Text: ${text} not found for selector: ${selector}`);
         }
