@@ -7,8 +7,16 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "puppeteer"
+    "puppeteer",
+    "mocha",
+    "chai",
+    "automation testing"
   ],
   "author": "Sasha Shulha (sashamiller666@gmail.com)",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.3.0",
+    "mocha": "^8.3.0",
+    "puppeteer": "^7.1.0"
+  }
 }
