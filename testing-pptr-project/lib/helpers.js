@@ -101,7 +101,7 @@ module.exports = {
         selector
     ) => {
         try {
-          await page.waitFor(() => !document.querySelector(selector));
+            await page.waitFor(() => !document.querySelector(selector));
         } catch (error) {
             throw new Error(`Selector: ${selector} is visible, but should not`);
         }
